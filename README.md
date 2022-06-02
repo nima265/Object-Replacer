@@ -1,7 +1,7 @@
 This tool can help you to replce new Game Object with old Game Object in Unity
-\noptions:
-    \n1. replacing one newObject with one oldObject
-    \n2. replacing one newObject with oldObject childern
-    \n3. replacing one newObject with a list of oldObjects
+<br /> options:
+    <br />1. replacing one newObject with one oldObject
+    <br />2. replacing one newObject with oldObject childern
+    <br />3. replacing one newObject with a list of oldObjects
     
     
