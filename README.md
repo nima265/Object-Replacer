@@ -4,4 +4,4 @@ This tool can help you to replce new Game Object with old Game Object in Unity
     <br />2. replacing one newObject with oldObject childern
     <br />3. replacing one newObject with a list of oldObjects
     
-    <br /> you can easly go on Tools->InstantiateObjects or just press CTRL+F1
+   <br /> you can easly go on Tools->InstantiateObjects or just press CTRL+F1
