@@ -6,6 +6,9 @@ This tool can help you to replce new Game Object with old Game Object in Unity
     
    <br /> you can easly go on Tools->InstantiateObjects or just press CTRL+F1
    
-   
-   
-![ezgif com-gif-maker](Uploading bandicam 2022-06-02 16-18-39-365.mp4…)
+
+
+
+https://user-images.githubusercontent.com/50208317/171629815-9b9caf39-cd06-4277-bd3d-adf5c25080d8.mp4
+
+
