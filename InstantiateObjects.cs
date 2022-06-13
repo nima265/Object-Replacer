@@ -25,7 +25,7 @@ public class InstantiateObjects : EditorWindow
     public List<GameObject> ReplacingObjectList = new List<GameObject>();
     private Vector2 scrollPos = Vector2.zero;
 
-
+    //
 
     [MenuItem("Tools/InstantiateObjects %F1")]
     public static void ShowWindow()
@@ -47,7 +47,7 @@ public class InstantiateObjects : EditorWindow
 
         GUIContent SpawnOnParentcontent = new GUIContent("Spawn On Parent","oldObject act like Parent gameObject and replace newObject with oldObject Children.\n\nIf Is a List is true newObject replace wih oldObject List");
         GUIContent SpawnOnSelfcontent = new GUIContent("Spawn On Self", "Replacing newObject with oldObject");
-        GUIContent CreatNewGameObjectOnList = new GUIContent("+", "Creat NewGame Object On List");
+        GUIContent CreatNewGameObjectOnList = new GUIContent("+", "Creat NewGame Object On List.\nAdd selected objects");
         GUIContent RemoveLastGameObjectOnList = new GUIContent("-", "remove last Object On List");
         GUIContent IsAList = new GUIContent("is a List?", "you have a list of old objects?");
         GUIContent newObj = new GUIContent("New Object", "Subject");
@@ -76,10 +76,20 @@ public class InstantiateObjects : EditorWindow
         {
 
             EditorGUILayout.BeginHorizontal();
+
             if (GUILayout.Button(CreatNewGameObjectOnList,GUILayout.Height(25)))
             {
+                if(Selection.gameObjects.Length > 0)
+                {
+                    ReplacingObjectList.AddRange(Selection.gameObjects);
+                }
+                else
+                {
+                    ReplacingObjectList.Add(null);
+                }
 
-                ReplacingObjectList.Add(null);
+                
+                
 
             }
             else if (GUILayout.Button(RemoveLastGameObjectOnList, GUILayout.Height(25)))
@@ -103,8 +113,6 @@ public class InstantiateObjects : EditorWindow
             ReplacingObjectList.Clear();
         }
 
-
-        
 
 
     }
