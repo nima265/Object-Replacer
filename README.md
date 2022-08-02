@@ -11,6 +11,9 @@
 <br />**Update V0.2**
 for masive number of gameObjects now you can just select them and click on **"+"** button to add them easily.
 
+<br />**Update V0.3**
+add a button to clear old gameObject list
+
 
 https://user-images.githubusercontent.com/50208317/171629815-9b9caf39-cd06-4277-bd3d-adf5c25080d8.mp4
 
