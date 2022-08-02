@@ -32,7 +32,7 @@ public class InstantiateObjects : EditorWindow
     {
         InstantiateObjects window = (InstantiateObjects)GetWindow(typeof(InstantiateObjects));
         window.Show();
-        window.maxSize = new Vector2(320, 330);
+        window.maxSize = new Vector2(320, 350);
         window.minSize = new Vector2(320, 120);
 
         
@@ -48,6 +48,7 @@ public class InstantiateObjects : EditorWindow
         GUIContent SpawnOnParentcontent = new GUIContent("Spawn On Parent","oldObject act like Parent gameObject and replace newObject with oldObject Children.\n\nIf Is a List is true newObject replace wih oldObject List");
         GUIContent SpawnOnSelfcontent = new GUIContent("Spawn On Self", "Replacing newObject with oldObject");
         GUIContent CreatNewGameObjectOnList = new GUIContent("+", "Creat NewGame Object On List.\nAdd selected objects");
+        GUIContent ClearOldGameObjectList = new GUIContent("Clear List", "Clear the old gameObject list");
         GUIContent RemoveLastGameObjectOnList = new GUIContent("-", "remove last Object On List");
         GUIContent IsAList = new GUIContent("is a List?", "you have a list of old objects?");
         GUIContent newObj = new GUIContent("New Object", "Subject");
@@ -100,6 +101,10 @@ public class InstantiateObjects : EditorWindow
                 }
             }
             EditorGUILayout.EndHorizontal();
+            if (GUILayout.Button(ClearOldGameObjectList))
+            {
+                ReplacingObjectList.Clear();
+            }
             scrollPos = EditorGUILayout.BeginScrollView(scrollPos, GUILayout.Height(200));
             for (int i = 0; i < ReplacingObjectList.Count; i++)
             {
@@ -107,6 +112,7 @@ public class InstantiateObjects : EditorWindow
             }
             EditorGUILayout.EndScrollView();
 
+           
         } 
         else if( ReplacingObjectList.Count > 0)
         {
@@ -163,7 +169,7 @@ public class InstantiateObjects : EditorWindow
                 old.SetActive(false);
             }
 
-            ReplacingObjectList.Clear();
+            
         }
 
         Debug.Log("Spawn On Old Objects Completed !");
