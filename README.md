@@ -15,9 +15,9 @@ for the massive number of gameObjects now you can just select them and click on 
 add a button to clear old gameObject list
 
 <br />**Update V0.4**
-added object preview
-fixed the minimum and maximum size of the window and made it dynamic
-added undo feature
+<br />added object preview
+<br />fixed the minimum and maximum size of the window and made it dynamic
+<br />added undo feature
 
 
 https://user-images.githubusercontent.com/50208317/171629815-9b9caf39-cd06-4277-bd3d-adf5c25080d8.mp4
