@@ -19,7 +19,7 @@ public class ObjectReplacer : EditorWindow
 	[SerializeField] protected GameObject newObject;
 	[Tooltip("If click on Spawn On Parent this acts like Parent and if click on Spawn On Self this acts like Replacing Object")]
 	[SerializeField] protected GameObject oldObject;
-	private List<Transform> activeChilds;
+	private List<Transform> activeChilds = new List<Transform>();
 	public bool isList = false;
 	public List<GameObject> ReplacingObjectList = new List<GameObject>();
 	private Vector2 scrollPos = Vector2.zero;
@@ -205,7 +205,8 @@ public class ObjectReplacer : EditorWindow
 	}
 
 	private void checkActiveChilds()
-	{
+	{	
+		
 		activeChilds.Clear();
 		for (int i = 0; i < oldObject.transform.childCount; i++)
 		{
